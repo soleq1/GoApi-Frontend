@@ -11,7 +11,11 @@ function App() {
     Email: string[]
   }
   
-  const [Fetchresponse,SetFetch] = useState<Dummy | null>(localStorage.getItem("response") ? JSON.parse(localStorage.getItem("response")) : null)
+  const [Fetchresponse, SetFetch] = useState<Dummy | null>(() => {
+    const response = localStorage.getItem("response");
+    return response ? JSON.parse(response) : null;
+
+  });
   const fetchData = async () =>{
     try{
       // const data = await fetch("http://localhost:8080/user/1?limit=5",{
