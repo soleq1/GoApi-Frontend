@@ -19,7 +19,7 @@ function App() {
   const fetchData = async () =>{
     try{
       // const data = await fetch("http://localhost:8080/user/1?limit=5",{
-      const data = await fetch("http://gorest.up.railway.app/user/1?limit=5",{
+      const data = await fetch("https://gorest.up.railway.app/user/1?limit=5",{
         method: "GET"
       })
       console.log(data)
@@ -78,7 +78,7 @@ useEffect(() => {
         <div className="bg-gray-800 text-white p-4 rounded-md font-mono text-sm mb-4">
           <pre>
             <code>
-              {`$ await fetch(http://gorest.up.railway.app/user/1?limit=5")\n`}
+              {`$ await fetch(https://gorest.up.railway.app/user/1?limit=5")\n`}
               {`  .then(response => response.json())\n`}
               {`  .then(data => console.log(data));`}
             </code>
@@ -111,7 +111,7 @@ useEffect(() => {
 
       <div className="bg-gray-800 text-white p-4 rounded-md font-mono text-sm mb-4">
         <pre>
-          <code>{`const response = await fetch(http://gorest.up.railway.app/funfacts/1?limit=2")`}</code>
+          <code>{`const response = await fetch(https://gorest.up.railway.app/funfacts/1?limit=2")`}</code>
         </pre>
 </div>
       <div className=" bg-gray-200 text-black p-4 rounded-md font-mono text-sm ">
