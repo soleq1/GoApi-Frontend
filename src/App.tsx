@@ -19,7 +19,7 @@ function App() {
   const fetchData = async () =>{
     try{
       // const data = await fetch("http://localhost:8080/user/1?limit=5",{
-      const data = await fetch("https://gorest-production-0608.up.railway.app/user/1?limit=5",{
+      const data = await fetch("http://gorest.up.railway.app/user/1?limit=5",{
         method: "GET"
       })
       console.log(data)
@@ -62,21 +62,23 @@ useEffect(() => {
   return (
     <div>
       {/* <Nav /> */}
-      <div className='flex justify-end pr-5 pt-5'>
-        <a href='https://github.com/soleq1/GoApi-Frontend'>
+      
+      <div className="flex justify-between items-center px-4 pt-4">
+  <img src="/DummyGocrop2.png" alt="GoLogo" className=" w-24" />
+  <a href="https://github.com/soleq1/GoApi-Frontend">
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 fill-white text-gray-800" viewBox="0 0 16 16">
+      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+    </svg>
+  </a>
+</div>
 
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
-  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-  
-</svg>
-        </a>
-      </div>
+
       <div className="mt-5 flex flex-col items-center">
         <pre className="text-3xl font-bold mb-4">Users Api</pre>
         <div className="bg-gray-800 text-white p-4 rounded-md font-mono text-sm mb-4">
           <pre>
             <code>
-              {`$ await fetch('https://example.com/user/1?limit=5')\n`}
+              {`$ await fetch(http://gorest.up.railway.app/user/1?limit=5")\n`}
               {`  .then(response => response.json())\n`}
               {`  .then(data => console.log(data));`}
             </code>
@@ -109,7 +111,7 @@ useEffect(() => {
 
       <div className="bg-gray-800 text-white p-4 rounded-md font-mono text-sm mb-4">
         <pre>
-          <code>{`const response = await fetch("placeholder.com/funfacts/1?limit=2")`}</code>
+          <code>{`const response = await fetch(http://gorest.up.railway.app/funfacts/1?limit=2")`}</code>
         </pre>
 </div>
       <div className=" bg-gray-200 text-black p-4 rounded-md font-mono text-sm ">
