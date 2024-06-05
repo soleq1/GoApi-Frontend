@@ -78,7 +78,7 @@ useEffect(() => {
         <div className="bg-gray-800 text-white p-4 rounded-md font-mono text-sm mb-4">
           <pre>
             <code>
-              {`$ await fetch(https://gorest.up.railway.app/user/1?limit=5")\n`}
+              {`$ await fetch("https://gorest.up.railway.app/user/1?limit=5")\n`}
               {`  .then(response => response.json())\n`}
               {`  .then(data => console.log(data));`}
             </code>
@@ -111,7 +111,7 @@ useEffect(() => {
 
       <div className="bg-gray-800 text-white p-4 rounded-md font-mono text-sm mb-4">
         <pre>
-          <code>{`const response = await fetch(https://gorest.up.railway.app/funfacts/1?limit=2")`}</code>
+          <code>{`const response = await fetch("https://gorest.up.railway.app/funfacts/1?limit=2")`}</code>
         </pre>
 </div>
       <div className=" bg-gray-200 text-black p-4 rounded-md font-mono text-sm ">
