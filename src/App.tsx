@@ -2,10 +2,10 @@ import { useEffect,useState } from 'react'
 
 import './App.css'
 import { Details } from './components/details';
-import { inject } from '@vercel/analytics';
+
   
 function App() {
-  inject()
+
   type Dummy ={ 
     Name :string[],
     LastName: string[],
