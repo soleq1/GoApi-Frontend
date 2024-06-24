@@ -78,8 +78,12 @@ useEffect(() => {
         <pre className="text-3xl font-bold mb-4">Users Api</pre>
         <div className="bg-gray-800 text-white p-4 rounded-md font-mono text-sm mb-4">
           <pre>
-            <code>
-              {`$ await fetch("https://gorest.up.railway.app/user/1?limit=5")\n`}
+            <code className='select-none'>
+              {`$ await fetch(`}
+              <span className='u select-all'>
+                {`"https://gorest.up.railway.app/user/1?limit=5"`}
+                </span>
+                {`)\n`}
               {`  .then(response => response.json())\n`}
               {`  .then(data => console.log(data));`}
             </code>
@@ -112,7 +116,12 @@ useEffect(() => {
 
       <div className="bg-gray-800 text-white p-4 rounded-md font-mono text-sm mb-4">
         <pre>
-          <code>{`const response = await fetch("https://gorest.up.railway.app/funfacts/1?limit=2")`}</code>
+          <code className='select-none'>{`const response = await fetch(`}
+            <span className='select-all'>
+              {`"https://gorest.up.railway.app/funfacts/1?limit=2"`}
+              </span>
+              {`)`}
+              </code>
         </pre>
 </div>
       <div className=" bg-gray-200 text-black p-4 rounded-md font-mono text-sm ">
