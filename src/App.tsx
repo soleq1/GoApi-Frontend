@@ -17,6 +17,7 @@ function App() {
     return response ? JSON.parse(response) : null;
 
   });
+  const [Modal,Setmodal]  = useState(false)
   const fetchData = async () =>{
     try{
       // const data = await fetch("http://localhost:8080/user/1?limit=5",{
@@ -55,9 +56,9 @@ useEffect(() => {
   }
 }, []);
 
-  if (!Fetchresponse) {
-    return <div className='flex justify-center mt-5'>Loading...</div>;
-  }
+  // if (Fetchresponse === null || Fetchresponse?.length === 0) {
+  //   return <div className='flex justify-center mt-5'>Loading...</div>;
+  // }
 
   
   return (
@@ -147,10 +148,30 @@ useEffect(() => {
       <div className='flex justify-center m-2'>
         <a className='bg-gray-800 p-2 rounded-md font-mono text-sm ' href='https://github.com/soleq1/'>Built By Edward</a>
       </div>
+        {Modal === false ? (
+  <div
+    className="
+      fixed
+      top-1/3 left-1/2
+      transform -translate-x-1/2 -translate-y-1/2
+      p-4 rounded-md
+      w-[50%]
+
+    "
+  >
+    <div className="flex justify-center items-center h-20 bg-opacity-25 bg-slate-600  rounded-md">
+      <h1 className="text-center">
+        This API is currently down. If there’s more interest, it will open back up!
+      </h1>
+    </div>
+  </div>
+) : null}
+
     </div>
 
     
   );
 }
+
 
 export default App
