@@ -163,6 +163,7 @@ useEffect(() => {
       <h1 className="text-center">
         This API is currently down. If there’s more interest, it will open back up!
       </h1>
+      <button onClick={() =>Setmodal(false)}></button>
     </div>
   </div>
 ) : null}
